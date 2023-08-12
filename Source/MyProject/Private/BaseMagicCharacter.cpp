@@ -5,6 +5,7 @@
 #include "MagicSystemComponent.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "AttributeSystemComponent.h"
 #include "Components/InputComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
@@ -42,6 +43,11 @@ ABaseMagicCharacter::ABaseMagicCharacter()
 	if (!MagicSystemComponent)
 	{
 		MagicSystemComponent = CreateDefaultSubobject<UMagicSystemComponent>(TEXT("MagicSystemComponent"));
+	}
+
+	if (!AttributeSet)
+	{
+		AttributeSet = CreateDefaultSubobject<UAttributeSystemComponent>(TEXT("AttributeSet"));
 	}
 }
 
@@ -94,6 +100,11 @@ void ABaseMagicCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 UMagicSystemComponent* ABaseMagicCharacter::GetMagicSystemComponent()
 {
 	return MagicSystemComponent;
+}
+
+UAttributeSystemComponent* ABaseMagicCharacter::GetAttributeSet()
+{
+	return AttributeSet;
 }
 
 void ABaseMagicCharacter::Move(const FInputActionValue& Value)

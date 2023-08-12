@@ -19,7 +19,6 @@ void ANormalSpell::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	// Optimize this method later
 	if (Owner && FVector::Dist(Owner->GetActorLocation(), this->GetActorLocation()) > SpellData->Range)
 	{
 		this->K2_DestroyActor();

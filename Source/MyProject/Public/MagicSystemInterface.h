@@ -24,6 +24,7 @@ class MYPROJECT_API IMagicSystemInterface
 	
 public:
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
+	virtual class UAttributeSystemComponent* GetAttributeSet() = 0;
 
 	// Pure virtual function which has to be implemented and is supposed to return a reference to the magicsystemcomponent
 	virtual class UMagicSystemComponent* GetMagicSystemComponent() = 0;

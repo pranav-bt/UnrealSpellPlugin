@@ -25,6 +25,6 @@ public:
 
 
 	void OnCustomCollision(AActor* OtherActor);
-	// Override the collision event
+	// Override the collision event. This is the function that decides what should happen on impact/trigger of spell.
 	virtual void OnCustomCollision_Implementation(AActor* OtherActor) override;
 };

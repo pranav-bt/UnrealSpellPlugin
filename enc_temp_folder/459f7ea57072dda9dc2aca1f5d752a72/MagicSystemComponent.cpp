@@ -45,7 +45,6 @@ bool UMagicSystemComponent::HasEnoughMana()
 
 void UMagicSystemComponent::ConsumeMana(int32 ManaAmountToConsume)
 {
-	// DO NOT USE CURRENT MANA. IT WILL BE REPLACED WITH MANA_ATTRIBTUE IN ATTRIBUTE SET
 	CurrentMana -= ManaAmountToConsume;
 }
 

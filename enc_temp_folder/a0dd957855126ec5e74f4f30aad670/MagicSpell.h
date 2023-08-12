@@ -50,7 +50,7 @@ public:
 	USpellData* SpellData;
 
 
-	// Helper Variables // 
+	// Helper Variables
 
 
 	// Owner of this spell that is cast
@@ -66,8 +66,8 @@ public:
 	AActor* HomingTarget;
 
 
-	// Helper Functions // 
-	// These function should be generic enough to be used in the derived BP custom spells // 
+	// Helper Functions
+
 
 	// Function that initializes the projectile's velocity in the shoot direction.
 	void FireInDirection(const FVector& ShootDirection);

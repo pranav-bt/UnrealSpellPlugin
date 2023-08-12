@@ -53,7 +53,11 @@ public:
 	//This defines what type of spell desried. Custom type requires implementation in the spell blueprint class otherwise it will function like a Normal spell.
 	SpellMode SpellType;
 
-	//This defines the damage or healing of the spell. Use Negative Values to Damage and Positive to Heal.
+	//This is the attribute of the other actor that will be affected
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, category = "General")
+	TSubclassOf<class UCharAttribute> Attribute;
+
+	//This defines the modifying value of the spell. Use Negative Values to reduce and Positive to increase attribute.
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, category = "General")
 	int32 SpellValue;
 

@@ -4,13 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "MagicSpell.h"
-#include "Test_AOESpell.generated.h"
+#include "Test_HomingSpell.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class MYPROJECT_API ATest_AOESpell : public AMagicSpell
+class MYPROJECT_API ATest_HomingSpell : public AMagicSpell
 {
 	GENERATED_BODY()
 	
@@ -25,6 +25,6 @@ public:
 
 
 	void OnCustomCollision(AActor* OtherActor);
-	// Override the collision event. This is the function that decides what should happen on impact/trigger of spell.
+	// Override the collision event
 	virtual void OnCustomCollision_Implementation(AActor* OtherActor) override;
 };

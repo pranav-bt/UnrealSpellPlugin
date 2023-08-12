@@ -35,7 +35,7 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	int32 MaxMana = 100;
 
-	// Current Mana of the owner. THIS WILL BE PART OF THE ATTRIBUTE SET IN THE FUTURE
+	// Current Mana of the owner
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	int32 CurrentMana = 100;
 

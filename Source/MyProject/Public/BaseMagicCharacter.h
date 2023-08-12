@@ -29,12 +29,19 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	// Implementing the interface to return MSC
 	virtual class UMagicSystemComponent* GetMagicSystemComponent();
 
+	// Implementing the interface to return the AS
+	virtual class UAttributeSystemComponent* GetAttributeSet();
 
 	// MagicSystemComponent //
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = MagicSystem)
 	class UMagicSystemComponent* MagicSystemComponent;
+
+	// AttributeSet //
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = MagicSystem)
+	class UAttributeSystemComponent* AttributeSet;
 
 	// Helper Variables //
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = CharacterSetup)
