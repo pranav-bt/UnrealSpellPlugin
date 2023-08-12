@@ -4,12 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "MagicSystemInterface.h"
 #include "InputActionValue.h"
 #include "Components/ActorComponent.h"
 #include "BaseMagicCharacter.generated.h"
 
 UCLASS()
-class MYPROJECT_API ABaseMagicCharacter : public ACharacter
+class MYPROJECT_API ABaseMagicCharacter : public ACharacter, public IMagicSystemInterface
 {
 	GENERATED_BODY()
 
@@ -27,6 +28,8 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	virtual class UMagicSystemComponent* GetMagicSystemComponent();
 
 
 	// MagicSystemComponent //

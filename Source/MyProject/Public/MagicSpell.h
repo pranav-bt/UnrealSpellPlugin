@@ -82,7 +82,7 @@ public:
 		const FHitResult& SweepResult);
 
 	// Collision function which can be customised if required or has general implementation
-	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Collision")
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Collision" , DisplayName = "SpellEffectTrigger")
 	void OnCustomCollision(AActor* OtherActor);
 	virtual void OnCustomCollision_Implementation(AActor* OtherActor);
 

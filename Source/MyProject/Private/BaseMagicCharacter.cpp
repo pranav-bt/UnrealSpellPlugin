@@ -91,6 +91,11 @@ void ABaseMagicCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 
 }
 
+UMagicSystemComponent* ABaseMagicCharacter::GetMagicSystemComponent()
+{
+	return MagicSystemComponent;
+}
+
 void ABaseMagicCharacter::Move(const FInputActionValue& Value)
 {
 	// input is a Vector2D

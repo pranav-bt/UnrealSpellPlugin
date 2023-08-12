@@ -63,34 +63,7 @@ void AMagicSpell::BeginPlay()
 
 	CollisionComponent->OnComponentBeginOverlap.AddDynamic(this, &AMagicSpell::OnCollisionOfSpell);
 
-	//switch (SpellData->SpellType)
-	//{
-	//case Normal:
-	//	if (Owner)
-	//	{
-	//		FireInDirection(Owner->GetActorForwardVector());
-	//	}
-	//	break;
-	//case Homing:
-	//	// Check if there is a valid enemy locked
-	//	if (Owner && SpellData->EnemyLocked)
-	//	{
-	//		ProjectileMovementComponent->bIsHomingProjectile = true;
-	//		ProjectileMovementComponent->HomingAccelerationMagnitude = ProjectileMovementComponent->MaxSpeed * 1.5;
-	//		ProjectileMovementComponent->HomingTargetComponent = SpellData->EnemyLocked->GetRootComponent();
-	//	}
-	//	// If not then fire a normal spell without homing
-	//	else if (Owner)
-	//	{
-	//		FireInDirection(Owner->GetActorForwardVector());
-	//	}
-	//	break;
-	//case AOE:
-	//	break;
-	//case Custom:
-	//default:
-	//	break;
-	//}
+
 }
 
 // Called every frame
@@ -98,35 +71,6 @@ void AMagicSpell::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-
-	//switch (SpellData->SpellType)
-	//{
-	//case Normal:
-	//	if (Owner)
-	//	{
-	//		FireInDirection(Owner->GetActorForwardVector());
-	//	}
-	//	break;
-	//case Homing:
-	//	// Check if there is a valid enemy locked
-	//	if (Owner && SpellData->EnemyLocked)
-	//	{
-	//		ProjectileMovementComponent->bIsHomingProjectile = true;
-	//		ProjectileMovementComponent->HomingAccelerationMagnitude = ProjectileMovementComponent->MaxSpeed * 1.5;
-	//		ProjectileMovementComponent->HomingTargetComponent = SpellData->EnemyLocked->GetRootComponent();
-	//	}
-	//	// If not then fire a normal spell without homing
-	//	else if (Owner)
-	//	{
-	//		FireInDirection(Owner->GetActorForwardVector());
-	//	}
-	//	break;
-	//case AOE:
-	//	break;
-	//case Custom:
-	//default:
-	//	break;
-	//}
 }
 
 void AMagicSpell::FireInDirection(const FVector& ShootDirection)
